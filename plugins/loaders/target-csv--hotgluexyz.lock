@@ -1,0 +1,72 @@
+{
+  "plugin_type": "loaders",
+  "name": "target-csv",
+  "namespace": "target_csv",
+  "variant": "hotgluexyz",
+  "label": "Comma Separated Values (CSV)",
+  "docs": "https://www.matatika.com/data-details/target-csv/",
+  "repo": "https://github.com/hotgluexyz/target-csv",
+  "pip_url": "git+https://github.com/hotgluexyz/target-csv.git",
+  "description": "Comma Separated Values (CSV) is a file format used to store and exchange data.\n\nCSV is a simple file format that stores data in a tabular form, with each row representing a record and each column representing a field. The values in each field are separated by commas, hence the name \"comma separated values.\" CSV files can be easily opened and edited in spreadsheet software like Microsoft Excel or Google Sheets, making them a popular choice for data exchange between different applications and systems. They are also commonly used for importing and exporting data from databases and other software tools.",
+  "logo_url": "/assets/logos/loaders/csv.png",
+  "settings": [
+    {
+      "name": "destination_path",
+      "kind": "string",
+      "value": "output",
+      "label": "Destination Path",
+      "description": "The file path where the CSV data will be saved.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "delimiter",
+      "kind": "options",
+      "value": ",",
+      "label": "Delimiter",
+      "description": "The character used to separate values in the CSV file.",
+      "options": [
+        {
+          "label": "Comma (,)",
+          "value": ","
+        },
+        {
+          "label": "Tab (  )",
+          "value": "\\t"
+        },
+        {
+          "label": "Semi-colon (;)",
+          "value": ";"
+        },
+        {
+          "label": "Pipe (|)",
+          "value": "|"
+        }
+      ],
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "quotechar",
+      "kind": "options",
+      "value": "'",
+      "label": "Quote Character",
+      "description": "The character used to enclose values in the CSV file.",
+      "options": [
+        {
+          "label": "Double Quote (\")",
+          "value": "\""
+        },
+        {
+          "label": "Single Quote (')",
+          "value": "'"
+        }
+      ],
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    }
+  ]
+}

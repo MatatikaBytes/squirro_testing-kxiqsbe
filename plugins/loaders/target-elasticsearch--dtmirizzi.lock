@@ -1,0 +1,168 @@
+{
+  "plugin_type": "loaders",
+  "name": "target-elasticsearch",
+  "namespace": "target_elasticsearch",
+  "variant": "dtmirizzi",
+  "label": "Elasticsearch",
+  "docs": "https://www.matatika.com/data-details/target-elasticsearch/",
+  "repo": "https://github.com/dtmirizzi/target-elasticsearch",
+  "pip_url": "target-elasticsearch",
+  "executable": "target-elasticsearch",
+  "description": "Elasticsearch is a search and analytics engine.\n\nElasticsearch is a distributed, RESTful search and analytics engine designed to store, search, and analyze large volumes of data in real-time. It is commonly used for log analytics, full-text search, security intelligence, business analytics, and operational intelligence use cases. Elasticsearch is built on top of the Apache Lucene library and provides a scalable, fault-tolerant, and highly available solution for indexing and searching data. It also offers a wide range of features such as data visualization, machine learning, and security.",
+  "logo_url": "/assets/logos/loaders/elasticsearch.png",
+  "capabilities": [
+    "about",
+    "stream-maps",
+    "schema-flattening"
+  ],
+  "settings": [
+    {
+      "name": "scheme",
+      "kind": "string",
+      "value": "http",
+      "label": "Scheme",
+      "description": "The protocol used to connect to Elasticsearch (e.g. http or https).",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "host",
+      "kind": "string",
+      "value": "localhost",
+      "label": "Host",
+      "description": "The hostname or IP address of the Elasticsearch server.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "port",
+      "kind": "integer",
+      "value": 9200,
+      "label": "Port",
+      "description": "The port number used to connect to Elasticsearch.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "username",
+      "kind": "string",
+      "label": "Username",
+      "description": "The username used for authentication with Elasticsearch.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "password",
+      "kind": "string",
+      "label": "Password",
+      "description": "The password used for authentication with Elasticsearch.",
+      "hidden": false,
+      "sensitive": true,
+      "protected": false
+    },
+    {
+      "name": "bearer_token",
+      "kind": "string",
+      "label": "Bearer Token",
+      "description": "The bearer token used for authentication with Elasticsearch.",
+      "hidden": false,
+      "sensitive": true,
+      "protected": false
+    },
+    {
+      "name": "api_key_id",
+      "kind": "string",
+      "label": "API Key Id",
+      "description": "The ID of the API key used for authentication with Elasticsearch.",
+      "hidden": false,
+      "sensitive": true,
+      "protected": false
+    },
+    {
+      "name": "api_key",
+      "kind": "string",
+      "label": "API Key",
+      "description": "The API key used for authentication with Elasticsearch.",
+      "hidden": false,
+      "sensitive": true,
+      "protected": false
+    },
+    {
+      "name": "ssl_ca_file",
+      "kind": "string",
+      "label": "SSL CA File",
+      "description": "The path to the SSL CA file used for secure connections to Elasticsearch.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "index_format",
+      "kind": "string",
+      "value": "ecs-{{ stream_name }}-{{ current_timestamp_daily }}",
+      "label": "Index Format",
+      "description": "The format used for indexing data in Elasticsearch.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "index_schema_fields",
+      "kind": "object",
+      "label": "Index Schema Fields",
+      "description": "The schema fields used for indexing data in Elasticsearch.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "metadata_fields",
+      "kind": "object",
+      "label": "Metadata Fields",
+      "description": "The metadata fields used for indexing data in Elasticsearch.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "stream_maps",
+      "kind": "object",
+      "label": "Stream Maps",
+      "description": "The stream maps used for indexing data in Elasticsearch.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "stream_map_config",
+      "kind": "object",
+      "label": "Stream Map Config",
+      "description": "The configuration settings for the stream maps used for indexing data in Elasticsearch.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "flattening_enabled",
+      "kind": "boolean",
+      "label": "Flattening Enabled",
+      "description": "Whether or not flattening is enabled for indexing data in Elasticsearch.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "flattening_max_depth",
+      "kind": "integer",
+      "label": "Flattening Max Depth",
+      "description": "The maximum depth allowed for flattening nested data when indexing in Elasticsearch.",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    }
+  ]
+}
